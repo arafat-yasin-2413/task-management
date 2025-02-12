@@ -6,5 +6,7 @@ urlpatterns = [
     path('manager-dashboard/', views.manager_dashboard),
     path('user-dashboard/', views.user_dashboard),
     path('test/', views.test),
+    path('create-task/',views.create_task),
+    
     
 ]
