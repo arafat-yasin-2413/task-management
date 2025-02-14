@@ -67,13 +67,22 @@ def create_task(request):
 
 
 def view_task(request):
-    # tasks = Task.objects.filter(status="COMPLETED")
+    # tasks = Task.objects.all()
+    # tasks = Task.objects.select_related('details').all()
+    # tasks = TaskDetail.objects.select_related('task').all()
     
-    # tasks = Task.objects.filter(due_date=date.today())
+    # foreign key only (Many to One)
+    # tasks = Task.objects.select_related('project').all()
     
-    # tasks = Task.objects.filter(title__icontains="c", status = "PENDING")
     
-    # tasks = Task.objects.filter(Q(status="PENDING") | Q(status="IN_PROGRESS"))
+    """ 
+    prefetch related diye Project er maddhome task access korbo 
+    reverse foreign key, manay to many te eita kaj kore
+    """
     
-    tasks = Task.objects.filter(status="c").exists()
+    # tasks = Project.objects.prefetch_related('task_set').all()
+    
+    
+    
+    tasks = Task.objects.prefetch_related("assigned_to").all()
     return render(request, 'show_task.html', {"tasks": tasks})
