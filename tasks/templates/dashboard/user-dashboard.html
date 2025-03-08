@@ -1,0 +1,224 @@
+{% extends "dashboard/dashboard.html" %} 
+{% block title %}User Dashboard{% endblock title %} 
+
+
+
+<main class="w-5/6 mx-auto">
+    {% block tasks %}
+	<!-- User Section -->
+	<section class="mb-40">
+		<div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+			<!-- taday's task side -->
+			<div class="bg-white rounded-xl shadow-lg p-2">
+				<div>
+					<h3 class="text-3xl font-bold mb-8 ms-2 mt-2">
+						Today's Tasks
+					</h3>
+
+					<!-- all today's tasks -->
+					<div class="space-y-4">
+						<!-- today's task 1  -->
+						<div class="flex items-center gap-3 p-4">
+							<div
+								class="w-2 h-2 bg-green-500 rounded-full"
+							></div>
+
+							<div class="w-full flex justify-between">
+								<div class="font-medium text-lg">
+									Complete project proposal
+								</div>
+								<div class="font-medium text-gray-400">
+									High
+								</div>
+							</div>
+						</div>
+
+						<!-- today's task 2  -->
+						<div class="flex items-center gap-3 p-4">
+							<div
+								class="w-2 h-2 bg-yellow-500 rounded-full"
+							></div>
+
+							<div class="w-full flex justify-between">
+								<div class="font-medium text-lg">
+									Review team updates
+								</div>
+								<div class="font-medium text-gray-400">
+									Normal
+								</div>
+							</div>
+						</div>
+
+						<!-- today's task 3  -->
+						<div class="flex items-center gap-3 p-4">
+							<div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+
+							<div class="w-full flex justify-between">
+								<div class="font-medium text-lg">
+									Prepare for client meeting
+								</div>
+								<div class="font-medium text-gray-400">Low</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- all tasks side -->
+			<div class="bg-white rounded-xl shadow-lg p-2">
+				<h3 class="text-3xl font-bold mb-8 ms-2 mt-2">All Tasks</h3>
+
+				<!-- Table section-->
+				<div class="rounded-xl">
+					<!-- task table -->
+					<div class="grid grid-cols-4 p-4 border-b">
+						<div class="text-gray-500 font-medium text-lg">
+							TASK TITLE
+						</div>
+						<div class="text-gray-500 font-medium text-lg">
+							PRIORITY
+						</div>
+						<div class="text-gray-500 font-medium text-lg">
+							TEAM
+						</div>
+						<div class="text-gray-500 font-medium text-lg">
+							CREATED AT
+						</div>
+					</div>
+
+					<!-- task items -->
+					<!-- row-1 -->
+					<div class="grid grid-cols-4 p-4 items-center space-y-2">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-2 h-2 bg-green-500 rounded-full"
+							></div>
+
+							<div class="font-medium">Test Low Task</div>
+						</div>
+
+						<div
+							class="font-medium text-sky-600 bg-sky-200 max-w-fit rounded-xl px-2"
+						>
+							Low
+						</div>
+
+						<div class="flex -space-x-2">
+							<div
+								class="w-8 h-8 bg-green-600 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								CA
+							</div>
+							<div
+								class="w-8 h-8 bg-blue-700 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								JS
+							</div>
+							<div
+								class="w-8 h-8 bg-yellow-700 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								B
+							</div>
+						</div>
+
+						<div>
+							<h4 class="text-gray-500 font-medium">
+								7 Months ago
+							</h4>
+						</div>
+					</div>
+
+					<!-- row-2 -->
+					<div class="grid grid-cols-4 p-4 items-center space-y-2">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-2 h-2 bg-yellow-500 rounded-full"
+							></div>
+
+							<div class="font-medium">Test Low Task</div>
+						</div>
+
+						<div
+							class="font-medium text-gray-600 bg-gray-200 max-w-fit rounded-xl px-2"
+						>
+							Normal
+						</div>
+
+						<div class="flex -space-x-2">
+							<div
+								class="w-8 h-8 bg-pink-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								AJ
+							</div>
+							<div
+								class="w-8 h-8 bg-amber-600 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								EV
+							</div>
+							<div
+								class="w-8 h-8 bg-lime-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								B
+							</div>
+						</div>
+
+						<div>
+							<h4 class="text-gray-500 font-medium">
+								15 Days ago
+							</h4>
+						</div>
+					</div>
+
+					<!-- row-3 -->
+					<div class="grid grid-cols-4 p-4 items-center space-y-2">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-2 h-2 bg-orange-500 rounded-full"
+							></div>
+
+							<div class="font-medium">Test Low Task</div>
+						</div>
+
+						<div
+							class="font-medium text-red-600 bg-red-200 max-w-fit rounded-xl px-2"
+						>
+							High
+						</div>
+
+						<div class="flex -space-x-2">
+							<div
+								class="w-8 h-8 bg-orange-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								CA
+							</div>
+							<div
+								class="w-8 h-8 bg-emerald-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								JS
+							</div>
+							<div
+								class="w-8 h-8 bg-cyan-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								EV
+							</div>
+							<div
+								class="w-8 h-8 bg-violet-500 rounded-full flex justify-center items-center text-white border-2 border-white"
+							>
+								BS
+							</div>
+						</div>
+
+						<div>
+							<h4 class="text-gray-500 font-medium">
+								6 Hours ago
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    
+    {% endblock tasks %}
+</main>
